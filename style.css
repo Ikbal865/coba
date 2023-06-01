@@ -1,0 +1,293 @@
+*{
+      padding:0;
+      margin:0;
+}
+
+html {
+      scroll-behavior: smooth;
+}
+
+body {
+      background: linear-gradient(100deg, white, red);
+      width: 100%;
+      height: 100%;
+      
+}
+
+.fContainer{
+      display: flex;
+      width: 100%;
+      background: white;
+}
+
+.wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      font-size:30px;
+      padding:15px;
+      width: 100%;
+      height: 100px;
+      background: #212121;
+      box-shadow:0 7px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.brand{
+      display: flex;
+      flex-direction: row;
+      font-family:verdana;
+      font-size: 1.5em;
+      padding: 15px;
+      text-transform: capitalize;
+      
+}
+
+.firstname{
+      color:white;
+      font-weight: 700;
+}
+
+.lastname{
+      color:red;
+      font-weight: 500;
+      padding-left: 4px;
+}
+
+.navigation{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-family: verdana;
+}
+
+.navigation >li {
+      list-style-type: none;
+      padding: 15px;
+}
+
+.navigation >li >a {
+      color: white;
+      font-size: 30px;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: capitalize;
+}
+
+.navigation>li>a:hover {
+      color: red;
+      transition: all .3s ease-in-out;
+}
+
+.navigation >li>img {
+      display:flex;
+      align-items:center;
+      width: 70px;
+      height: 70px;
+}
+
+.active{
+      background: red;
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+}
+
+.active:hover{
+      color: white !important;
+}
+
+section{
+      padding: 3rem 4rem;
+}
+
+.description{
+      font-family: serif;
+      font-size: 15px;
+      font-weight: 500;
+}
+
+.colom{
+      font-family: serif;
+      font-size:12px;
+      font-weight: 500;
+      margin-top:20px;
+}
+
+h1{
+      font-size: 5rem;
+}
+
+h2{
+      font-family: helvetica;
+      font-size: 3rem;
+}
+
+.content {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+}
+
+.content div {
+      position:relative;
+      width:32%;
+      overflow:hidden;
+      border-radius: 12px;
+}
+
+.content div img {
+      object-fit:cover;
+      height: 100%;
+      width: 100%;
+      transition: .3s ease;
+}
+
+.content div:hover img {
+      transform: scale(1.2);
+}
+
+.content div .title-box {
+      content:"";
+      height: 100px;
+      width: 100%;
+      position: absolute;
+      left:0;
+      bottom:0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0),black);
+      z-index:1;
+      transform: translateY(50px);
+      transition: .5s ease;
+}
+
+.content div:hover .title-box {
+      transform: translateY(0);
+}
+
+.content div .title{
+      position: absolute;
+      width: 100%;
+      color: white;
+      z-index:2;
+      bottom: 7px;
+      padding: 10px;
+      transform: translateY(50px);
+      transition: .5s ease;
+      cursor: pointer;
+      font-size:2rem;
+}
+
+.content div:hover .title {
+      transform: translateY(0);
+}
+
+.sosmed{
+      display: inline-flex;
+      list-style: none;
+      padding-left: 130px;
+}
+
+.sosmed .icon {
+      position: relative;
+      background: white;
+      border-radius: 50px;
+      padding: 15px;
+      margin: 55px 10px;
+      width: 65px;
+      height: 65px;
+      font-size: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);   
+}
+
+.sosmed .tooltip {
+      position: absolute;
+      top:0;
+      font-size:25px;
+      background: white;
+      color: black;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      opacity:0;
+      pointer-event:none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sosmed .tooltip::before{
+      position: absolute;
+      content:"";
+      height: 8px;
+      width: 8px;
+      background: white;
+      bottom: -3px;
+      left: 50%;
+      transform: trnslate(-50%) rotate(45deg);   
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);  
+}
+
+.sosmed .icon:hover .tooltip{
+      top:-45px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+}
+
+
+
+.sosmed .instagram:hover,
+.sosmed .instagram:hover .tooltip,
+.sosmed .instagram:hover .tooltip::before {
+      background: #ff0088;
+      color:white;
+}
+
+.sosmed .facebook:hover,
+.sosmed .facebook:hover .tooltip,
+.sosmed .facebook:hover .tooltip::before {
+      background: #0057ff;
+      color:white;
+}
+
+.sosmed .line:hover,
+.sosmed .line:hover .tooltip,
+.sosmed .line:hover .tooltip::before {
+      background: #47ff40;
+      color:white;
+}
+
+.sosmed .pinterest:hover,
+.sosmed .pinterest:hover .tooltip,
+.sosmed .pinterest:hover .tooltip::before {
+      background: #ff000a;
+      color:white;
+}
+
+.sosmed .whatsapp:hover,
+.sosmed .whatsapp:hover .tooltip,
+.sosmed .whatsapp:hover .tooltip::before {
+      background: #11ff00;
+      color:white;
+}
+
+
+a{
+      color:black;
+}
+
+
+footer{
+      font-family: serif;
+      font-size: 30px;
+      background: #212121;
+      color:white;
+      width: 100%;
+      height: 10vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+}
